@@ -10,10 +10,10 @@ const playfair = Playfair_Display({
 export default function Status() {
   return (
     <div>
-      <div className="bg-[#434242] rounded-2xl p-8 mx-6 my-12 flex items-center max-w-5xl mx-auto">
+      <div className="bg-[#434242] rounded-2xl p-8 mx-6 my-12 flex items-center max-w-8/9 mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 p-8 w-full">
           {/* 画像エリア：横幅50%・高さは正方形に自動調整 */}
-          <div className="w-full md:w-1/2 relative aspect-square">
+          <div className="w-full md:w-1/2 max-w-1/2 relative aspect-square">
             <Image
               src="/Status.jpg"
               alt="Profile Photo"
