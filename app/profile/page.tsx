@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Playfair_Display } from "next/font/google";
 import Status from "./Status";
 import ThreePoint from "./ThreePoint";
