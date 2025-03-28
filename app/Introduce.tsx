@@ -14,7 +14,7 @@ export default function Introduce() {
       {/* 左側：画像 */}
       <div className="w-1/2 flex justify-center">
         <Image
-          src="/introduce.png"
+          src="/images/introduce.png"
           alt="Introduce Image"
           width={300}
           height={300}

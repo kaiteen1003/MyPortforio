@@ -13,7 +13,7 @@ const Skill = () => {
       {/* 左側：画像 */}
       <div className="w-1/2 flex justify-center">
         <Image
-          src="/Skills.png"
+          src="/images/Skills.png"
           alt="Skills Image"
           width={300}
           height={300}

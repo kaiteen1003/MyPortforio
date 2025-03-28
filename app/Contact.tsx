@@ -14,7 +14,7 @@ const Contact = () => {
       {/* 左側：画像 */}
       <div className="w-1/2 flex justify-center">
         <Image
-          src="/Contact.png"
+          src="/images/Contact.png"
           alt="Contact Image"
           width={300}
           height={300}

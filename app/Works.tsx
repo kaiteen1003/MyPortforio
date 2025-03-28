@@ -14,7 +14,7 @@ const Works = () => {
       {/* 左側：画像 */}
       <div className="w-1/2 flex justify-center">
         <Image
-          src="/Works.png"
+          src="/images/Works.png"
           alt="Works Image"
           width={300}
           height={300}
