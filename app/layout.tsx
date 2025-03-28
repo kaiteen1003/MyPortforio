@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
+import Link from "next/link";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -33,29 +34,29 @@ export default function RootLayout({
           <nav>
             <ul className="flex gap-4 mr-6">
               <li>
-                <a href="/" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/profile" className="hover:underline">
+                <Link href="/profile" className="hover:underline">
                   Profile
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/skills" className="hover:underline">
+                <Link href="/skills" className="hover:underline">
                   Skills
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/works" className="hover:underline">
+                <Link href="/works" className="hover:underline">
                   Works
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contact" className="hover:underline">
+                <Link href="/contact" className="hover:underline">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

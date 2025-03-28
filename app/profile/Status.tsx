@@ -1,12 +1,5 @@
 import Image from "next/image";
 
-import { Playfair_Display } from "next/font/google";
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
-
 export default function Status() {
   return (
     <div>
