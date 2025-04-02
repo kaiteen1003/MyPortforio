@@ -1,9 +1,13 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Playfair_Display } from "next/font/google";
 import Introduce from "./Introduce";
+import Image from "next/image";
 import Skill from "./Skill";
 import Works from "./Works";
 import Contact from "./Contact";
+import { motion } from "framer-motion";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -13,29 +17,86 @@ const playfair = Playfair_Display({
 export default function Home() {
   return (
     <div>
-      <div className="relative w-full">
-        <img src="images/Mainbg.png" alt="Main Background" className="h-auto" />
+      {/* メインビジュアル */}
+      <div className="relative w-screen">
+        <Image
+          src="/images/Mainbg.png"
+          alt="Main Background"
+          width={1920}
+          height={1080}
+          className="w-full h-auto object-cover"
+          priority
+        />
         <div className="absolute top-[32%] left-1/2 transform -translate-x-1/2 text-center">
-          <h1
-            className={`${playfair.className} text-white text-[42px]  whitespace-nowrap `}
+          <motion.h1
+            className={`${playfair.className} text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl whitespace-nowrap`}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
           >
             Welcome to My Portfolio .
-          </h1>
-          <p className={`${playfair.className} text-white text-[20px] mt-6`}>
+          </motion.h1>
+
+          <motion.p
+            className={`${playfair.className} text-white text-base sm:text-lg md:text-xl lg:text-2xl mt-6`}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
             ご覧いただきありがとうございます。
             <br /> 石飛海斗と申します。
             <br />
             ここでは私のスキルなどについて紹介しています。
-          </p>
-          <Button className="bg-white hover:bg-[#434242] text-black  mt-6">
-            View More
-          </Button>
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+          >
+            <Button className="bg-white hover:bg-[#434242] text-black mt-6">
+              View More
+            </Button>
+          </motion.div>
         </div>
       </div>
-      <Introduce />
-      <Skill />
-      <Works />
-      <Contact />
+
+      {/* フェードイン部分 */}
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Introduce />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Skill />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Works />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <Contact />
+      </motion.div>
     </div>
   );
 }
