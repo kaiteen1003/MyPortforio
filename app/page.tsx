@@ -38,7 +38,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.p
-            className={`${playfair.className} text-white text-base sm:text-lg md:text-xl lg:text-2xl mt-6`}
+            className={`${playfair.className} text-white text-base sm:text-xl  md:text-xl lg:text-2xl mt-6`}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
