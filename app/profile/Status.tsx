@@ -8,7 +8,7 @@ export default function Status() {
           {/* 画像エリア：横幅50%・高さは正方形に自動調整 */}
           <div className="w-full md:w-1/2 max-w-1/2 relative aspect-square">
             <Image
-              src="/Status.jpg"
+              src="/images/Status.jpg"
               alt="Profile Photo"
               fill
               className="rounded-xl shadow-lg object-cover"

@@ -29,7 +29,7 @@ export default function Home() {
         />
         <div className="absolute top-[32%] left-1/2 transform -translate-x-1/2 text-center">
           <motion.h1
-            className={`${playfair.className} text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl whitespace-nowrap`}
+            className={`${playfair.className} text-white text-xl sm:text-3xl md:text-5xl lg:text-6xl whitespace-nowrap`}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
@@ -38,7 +38,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.p
-            className={`${playfair.className} text-white text-base sm:text-xl  md:text-xl lg:text-2xl mt-6`}
+            className={`${playfair.className} text-white  text-[0.625rem] mt-3  md:text-xl lg:text-2xl lg:mt-6`}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
@@ -54,7 +54,11 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <Button className="bg-white hover:bg-[#434242] text-black mt-6">
+            <Button
+              className="bg-white hover:bg-[#434242] text-black text-xs px-4 py-2 mt-2 
+             sm:text-base sm:px-6 sm:py-3 
+             lg:text-lg lg:px-8 lg:py-4 lg:mt-6"
+            >
               View More
             </Button>
           </motion.div>

@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
-import Link from "next/link";
+import "./globals.css";
+import Header from "../components/ui/Header";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-
-// These styles apply to every route in the application
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,64 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <header
-          className={`${playfair.className} text-xl bg-[#434242] text-white p-4 flex justify-between items-center`}
-        >
-          <img
-            src="images//HeaderIcon.png"
-            className="h-12 w-auto"
-            alt="Header Logo"
-          />
-          <nav>
-            <ul className="flex gap-4 mr-6">
-              <li>
-                <Link href="/" className="hover:underline">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/profile" className="hover:underline">
-                  Profile
-                </Link>
-              </li>
-              <li>
-                <Link href="/skills" className="hover:underline">
-                  Skills
-                </Link>
-              </li>
-              <li>
-                <Link href="/works" className="hover:underline">
-                  Works
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:underline">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <main className="">{children}</main>
+      <body className={playfair.className}>
+        <Header />
+        <main>{children}</main>
         <footer className="bg-[#434242] text-white p-4 text-center">
-          <div className="flex justify-between items-center gap-4 mb-4 w-full">
-            <img
-              src="images//HeaderIcon.png"
-              alt="Logo 1"
-              className="h-15 w-auto"
-            />
-            <div className="flex-1 flex justify-center">
-              <img
-                src="images//TeckStack.png"
-                alt="Logo 2"
-                className="h-15 w-auto mr-8"
-              />
-            </div>
-            <div className="h-15 w-15"></div>
-          </div>
-
-          <p className="text-sm"> Copyright © 2025 my portfolio</p>
+          {/* 省略 */}
+          <p className="text-sm">Copyright © 2025 my portfolio</p>
         </footer>
       </body>
     </html>
