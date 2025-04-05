@@ -1,5 +1,6 @@
 import React from "react";
 import { Playfair_Display } from "next/font/google";
+import SkillCards from "@/components/ui/SkillCards";
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -21,6 +22,7 @@ export default function Home() {
           </h1>
         </div>
       </div>
+      <SkillCards />
     </div>
   );
 }
