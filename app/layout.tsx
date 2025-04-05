@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "../components/ui/Header";
+import Footer from "@/components/ui/Footer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -24,10 +25,7 @@ export default function RootLayout({
       <body className={playfair.className}>
         <Header />
         <main>{children}</main>
-        <footer className="bg-[#434242] text-white p-4 text-center">
-          {/* 省略 */}
-          <p className="text-sm">Copyright © 2025 my portfolio</p>
-        </footer>
+        <Footer />
       </body>
     </html>
   );

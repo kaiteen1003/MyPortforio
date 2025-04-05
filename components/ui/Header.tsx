@@ -23,13 +23,16 @@ export default function Header() {
       </div>
       <nav className="hidden md:block">
         <ul className="flex gap-4 mr-6">
-          {["Home", "Profile", "Skills", "Works", "Contact"].map((name) => (
-            <li key={name}>
-              <Link href={`/${name.toLowerCase()}`} className="hover:underline">
-                {name}
-              </Link>
-            </li>
-          ))}
+          {["Home", "Profile", "Skills", "Works", "Contact"].map((name) => {
+            const path = name === "Home" ? "/" : `/${name.toLowerCase()}`;
+            return (
+              <li key={name}>
+                <Link href={path} className="hover:underline">
+                  {name}
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </nav>
       {menuOpen && (

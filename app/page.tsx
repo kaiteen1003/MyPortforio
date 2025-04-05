@@ -55,7 +55,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.8 }}
           >
             <Button
-              className="bg-white hover:bg-[#434242] text-black text-xs px-4 py-2 mt-2 
+              className="bg-white hover:bg-[#434242] text-black text-sm px-4 py-2 mt-2 
              sm:text-base sm:px-6 sm:py-3 
              lg:text-lg lg:px-8 lg:py-4 lg:mt-6"
             >
