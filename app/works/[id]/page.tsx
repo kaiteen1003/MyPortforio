@@ -27,6 +27,16 @@ const WorkDetailPage = ({ params }: Props) => {
       <div className="w-full md:w-1/2">
         <h1 className="text-3xl font-bold mb-4">{work.title}</h1>
         <p className="text-lg text-gray-700">{work.description}</p>
+        {work.link && (
+          <a
+            href={work.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline hover:text-blue-800 transition"
+          >
+            このサイトを表示する
+          </a>
+        )}
       </div>
     </div>
   );
