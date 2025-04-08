@@ -1,4 +1,3 @@
-// app/works/[id]/page.tsx
 import { works } from "@/components/data/worksData";
 import Image from "next/image";
 
@@ -9,7 +8,6 @@ const WorkDetailPage = async ({ params }: { params: { id: string } }) => {
 
   return (
     <div className="flex flex-col md:flex-row items-center gap-8 p-8 max-w-5xl mx-auto">
-      {/* 左：画像 */}
       <div className="w-full md:w-1/2">
         <Image
           src={work.image}
@@ -19,8 +17,6 @@ const WorkDetailPage = async ({ params }: { params: { id: string } }) => {
           className="rounded-xl object-cover w-full"
         />
       </div>
-
-      {/* 右：テキスト */}
       <div className="w-full md:w-1/2">
         <h1 className="text-3xl font-bold mb-4">{work.title}</h1>
         <p className="text-lg text-gray-700">{work.description}</p>
@@ -40,3 +36,9 @@ const WorkDetailPage = async ({ params }: { params: { id: string } }) => {
 };
 
 export default WorkDetailPage;
+
+export async function generateStaticParams() {
+  return works.map((work) => ({
+    id: work.id,
+  }));
+}
