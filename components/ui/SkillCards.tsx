@@ -1,7 +1,6 @@
 import React from "react";
 import { Anton } from "next/font/google";
 import { frontendSkills, backendSkills } from "../data/skillsData";
-import { TbBrandNextjs } from "react-icons/tb";
 
 const anton = Anton({
   weight: "400",
