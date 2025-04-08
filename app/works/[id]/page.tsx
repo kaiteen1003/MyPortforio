@@ -1,3 +1,4 @@
+// app/works/[id]/page.tsx
 import { works } from "@/components/data/worksData";
 import Image from "next/image";
 
@@ -5,7 +6,7 @@ type Props = {
   params: { id: string };
 };
 
-const WorkDetailPage = ({ params }: Props) => {
+const WorkDetailPage = async ({ params }: Props) => {
   const work = works.find((w) => w.id === params.id);
 
   if (!work) return <div className="p-6">作品が見つかりませんでした。</div>;
