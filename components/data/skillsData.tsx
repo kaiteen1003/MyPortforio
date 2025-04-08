@@ -1,4 +1,3 @@
-import { Anton } from "next/font/google";
 import {
   FaHtml5,
   FaCss3Alt,
