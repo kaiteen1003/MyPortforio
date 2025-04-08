@@ -2,11 +2,7 @@
 import { works } from "@/components/data/worksData";
 import Image from "next/image";
 
-interface PageProps {
-  params: { id: string };
-}
-
-const WorkDetailPage = async ({ params }: PageProps) => {
+const WorkDetailPage = async ({ params }: { params: { id: string } }) => {
   const work = works.find((w) => w.id === params.id);
 
   if (!work) return <div className="p-6">作品が見つかりませんでした。</div>;
