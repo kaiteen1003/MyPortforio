@@ -1,5 +1,6 @@
 import ClientWorksGrid from "./ClientWorksGrid";
 import { Playfair_Display } from "next/font/google";
+import Image from "next/image";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -9,11 +10,13 @@ const playfair = Playfair_Display({
 export default function WorksPage() {
   return (
     <div>
-      <div className="relative w-full">
-        <img
+      <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px]">
+        <Image
           src="/images/Works.Mainbg.png"
           alt="Main Background"
-          className="w-full h-full object-cover"
+          fill
+          priority
+          className="object-cover"
         />
         <div className="absolute top-[32%] left-1/2 transform -translate-x-1/2 text-center">
           <h1

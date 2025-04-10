@@ -1,8 +1,9 @@
 import { works } from "@/components/data/worksData";
 import Image from "next/image";
 
-export default async function Page({ params }: any) {
-  const work = works.find((w) => w.id === params.id);
+export default async function Page(props: { params: { id: string } }) {
+  const { id } = await props.params;
+  const work = works.find((w) => w.id === id);
 
   if (!work) return <div className="p-6">作品が見つかりませんでした。</div>;
 
@@ -35,6 +36,7 @@ export default async function Page({ params }: any) {
   );
 }
 
+// 必須：静的パス生成
 export async function generateStaticParams() {
   return works.map((work) => ({
     id: work.id,
