@@ -1,11 +1,7 @@
 import { works } from "@/components/data/worksData";
 import Image from "next/image";
 
-export default async function WorkDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function Page({ params }: any) {
   const work = works.find((w) => w.id === params.id);
 
   if (!work) return <div className="p-6">作品が見つかりませんでした。</div>;
