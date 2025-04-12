@@ -15,7 +15,7 @@ export default function Home() {
           alt="Main Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute top-[32%] left-1/2 transform -translate-x-1/2 text-center">
+        <div className="absolute top-0 sm:top-[32%] left-1/2 transform -translate-x-1/2 text-center">
           <h1
             className={`${playfair.className} text-white text-[42px]  whitespace-nowrap `}
           >

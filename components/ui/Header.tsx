@@ -38,17 +38,16 @@ export default function Header() {
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-[#434242] text-white md:hidden z-10">
           <ul className="flex flex-col p-4 space-y-2">
-            {["Home", "Profile", "Skills", "Works", "Contact"].map((name) => (
-              <li key={name}>
-                <Link
-                  href={`/${name.toLowerCase()}`}
-                  className="block hover:underline"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {name}
-                </Link>
-              </li>
-            ))}
+            {["Home", "Profile", "Skills", "Works", "Contact"].map((name) => {
+              const path = name === "Home" ? "/" : `/${name.toLowerCase()}`;
+              return (
+                <li key={name}>
+                  <Link href={path} className="hover:underline">
+                    {name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       )}
