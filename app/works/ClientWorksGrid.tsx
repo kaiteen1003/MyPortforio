@@ -2,30 +2,37 @@
 
 import { works } from "@/components/data/worksData";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 export default function ClientWorksGrid() {
-  const router = useRouter();
-
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto">
+    <div className="p-6 max-w-6xl mx-auto space-y-16">
       {works.map((work) => (
         <div
           key={work.id}
-          className="bg-[#434242] rounded-xl shadow-md hover:scale-105 transition cursor-pointer"
-          onClick={() => router.push(`/works/${work.id}`)}
+          className="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-xl shadow-lg"
         >
-          <div className="relative w-full h-[250px]">
+          <div className="w-full md:w-1/2">
             <Image
               src={work.image}
               alt={work.title}
-              fill
-              className="object-cover rounded-t-xl"
+              width={600}
+              height={400}
+              className="rounded-xl object-cover w-full"
             />
           </div>
-
-          <div className="p-4 text-center font-semibold text-white">
-            {work.title}
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl font-bold mb-4">{work.title}</h2>
+            <p className="text-gray-700 text-lg mb-4">{work.description}</p>
+            {work.link && (
+              <a
+                href={work.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800 transition"
+              >
+                このサイトを表示する
+              </a>
+            )}
           </div>
         </div>
       ))}
