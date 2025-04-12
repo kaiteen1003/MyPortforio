@@ -1,4 +1,6 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -18,6 +20,18 @@ const Footer = () => {
             />
           </div>
           <div className="h-15 w-15"></div>
+          <div className="flex justify-center gap-6 mt-8">
+            <a
+              href="https://github.com/kaiteen1003"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub size={30} />
+            </a>
+            <a href="mailto:kaijobhunting1003@gmail.com">
+              <MdEmail size={30} />
+            </a>
+          </div>
         </div>
 
         <p className="text-sm"> Copyright © 2025 my portfolio</p>
