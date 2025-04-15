@@ -8,11 +8,13 @@ export default function Header() {
 
   return (
     <header className="text-xl bg-[#434242] text-white p-4 flex justify-between items-center relative">
-      <img
-        src="images/HeaderIcon.png"
-        className="h-12 w-auto"
-        alt="Header Logo"
-      />
+      <Link href="/">
+        <img
+          src="images/HeaderIcon.png"
+          className="h-12 w-auto cursor-pointer"
+          alt="Header Logo"
+        />
+      </Link>
       <div
         className="md:hidden cursor-pointer"
         onClick={() => setMenuOpen(!menuOpen)}
