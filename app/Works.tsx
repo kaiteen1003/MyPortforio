@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Playfair_Display } from "next/font/google";
-
+import Link from "next/link";
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -30,9 +30,11 @@ const Works = () => {
           <br />
           研究についてはこちらをご覧ください。
         </p>
-        <Button className="bg-white text-black hover:bg-gray-300">
-          View More
-        </Button>
+        <Link href="/works">
+          <Button className="bg-white text-black hover:bg-gray-300">
+            View More
+          </Button>
+        </Link>
       </div>
     </div>
   );

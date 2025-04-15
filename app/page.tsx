@@ -54,19 +54,22 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <Button
-              className="bg-white hover:bg-[#434242] text-black text-sm px-4 py-2 mt-2 
-             sm:text-base sm:px-6 sm:py-3 
-             lg:text-lg lg:px-8 lg:py-4 lg:mt-6"
-            >
-              View More
-            </Button>
+            <a href="#introduce">
+              <Button
+                className="bg-white hover:bg-[#434242] text-black text-sm px-4 py-2 mt-2 
+        sm:text-base sm:px-6 sm:py-3 
+        lg:text-lg lg:px-8 lg:py-4 lg:mt-6"
+              >
+                View More
+              </Button>
+            </a>
           </motion.div>
         </div>
       </div>
 
       {/* フェードイン部分 */}
       <motion.div
+        id="introduce" // ← ここ追加
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
@@ -76,6 +79,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div
+        id="skill"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
@@ -85,6 +89,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div
+        id="works"
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
@@ -94,6 +99,7 @@ export default function Home() {
       </motion.div>
 
       <motion.div
+        id="contact"
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}

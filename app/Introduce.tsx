@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Playfair_Display } from "next/font/google";
+import Link from "next/link";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -30,9 +31,11 @@ export default function Introduce() {
           <br />
           こちらをご覧ください。
         </p>
-        <Button className="bg-white text-black hover:bg-gray-300">
-          View More
-        </Button>
+        <Link href="/profile">
+          <Button className="bg-white text-black hover:bg-gray-300">
+            View More
+          </Button>
+        </Link>
       </div>
     </div>
   );
