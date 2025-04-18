@@ -14,7 +14,7 @@ const Footer = () => {
             alt="Logo 1"
             className="h-15 w-auto"
           />
-          <div className="static sm:absolute sm:left-1/2 flex items-center justify-center gap-4 py-4">
+          <div className="static sm:absolute sm:left-2/5 flex items-center justify-center gap-4 py-4">
             {/* Next.js Icon */}
             <TbBrandNextjs size={20} className="text-white block sm:hidden" />
             <TbBrandNextjs size={40} className="text-white hidden sm:block" />
@@ -45,8 +45,8 @@ const Footer = () => {
             <SiVercel size={40} className="text-white hidden sm:block" />
           </div>
 
-          <div className="h-15 w-15"></div>
-          <div className="flex justify-center gap-6 mt-8">
+          <div className="sm:h-15 sm:w-15"></div>
+          <div className="flex justify-center gap-6 sm:mt-8">
             <a
               href="https://github.com/kaiteen1003"
               target="_blank"
